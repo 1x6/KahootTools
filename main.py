@@ -9,7 +9,7 @@ bot = client()
 
 
 def spamjoin() :
-    print('KahootTools - Made for 1337\'ing up your k4h00t gam3s!')
+    print('KahootTools - made for haxxors')
     gameid = input('Enter the game pin: ')
     botamount = input('Enter the amount of bots (max 2000): ')
     custom_usr = input('Enter the desired username for your bots: ')

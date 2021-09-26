@@ -15,8 +15,6 @@ def spamjoin() :
     custom_usr = input('Enter the desired username for your bots: ')
 
     def joingame() :
-        #yep = gen_user()
-        #bot.join((gameid), f"{yep}")
 
         usrname = (custom_usr + str(random.randint(1, 100000)))
 
@@ -27,9 +25,9 @@ def spamjoin() :
 
         bot.on("joined", joinHandle)
         print(f"Joined game {gameid} with username {usrname}.")
-        # time.sleep(.1)
+        
 
-    for x in range(0, (int(botamount) )) : # + 10  this is not code
+    for x in range(0, (int(botamount) )) :
         joingame()
 
 spamjoin()

@@ -1,33 +1,34 @@
+```py
+import string, random, os, time, threading
 from kahoot import client
-import string
-import random
-import time
-
-
 
 bot = client()
 
+class KahootSpammer:
+    def __init__(self):
+        print('KahootTools - Remastered by Nightmrs - Originally made by xeny')
+        self.gamepin = input('PIN: ')
+        self.botamount = input('Amount of bots (max 2000): ')
+        self.custom_user = input('Enter desired username (5 or less chars) (leave blank if none): ')
 
-def spamjoin() :
-    print('KahootTools - made for haxxors (\'im kidding bro :l)') 
-    gameid = input('Enter the game pin: ')
-    botamount = input('Enter the amount of bots (max 2000): ')
-    custom_usr = input('Enter the desired username for your bots: ')
+    def joinHandle(self):
+        pass
 
-    def joingame() :
+    def randName(self, integer):
+        return ''.join(random.choice(string.ascii_letters) for _ in range(integer))
 
-        usrname = (custom_usr + str(random.randint(1, 100000)))
+    def joingame(self):
+        if self.custom_user == "":
+            self.username = ('xeny ' + '| ' + self.randName(6))
+        else:
+            self.username = (self.custom_user + ' | ' + self.randName(6))
 
-        bot.join((gameid), usrname)
+        bot.join(self.gamepin, self.username)
+        bot.on("joined", self.joinHandle)
+        print(f"Joined game {self.gamepin} with username {self.username}.")
 
-        def joinHandle() :
-            pass
-
-        bot.on("joined", joinHandle)
-        print(f"Joined game {gameid} with username {usrname}.")
-        
-
-    for x in range(0, (int(botamount) )) :
-        joingame()
-
-spamjoin()
+if __name__ == '__main__':
+    Client = KahootSpammer()
+    for x in range(int(Client.botamount)):
+       threading.Thread(target=Client.joingame()).start()
+``` kahoot spammer made by yours truly

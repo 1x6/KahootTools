@@ -1,4 +1,3 @@
-```py
 import string, random, os, time, threading
 from kahoot import client
 
@@ -31,4 +30,3 @@ if __name__ == '__main__':
     Client = KahootSpammer()
     for x in range(int(Client.botamount)):
        threading.Thread(target=Client.joingame()).start()
-``` kahoot spammer made by yours truly

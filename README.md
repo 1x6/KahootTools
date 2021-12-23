@@ -1,5 +1,6 @@
 # KahootTools
 
-##open source kahoot spammer
-##lmao this is so simple idec
-## enjoy?!?!?
+- simple asf 
+- its open source
+
+enjoy?!?!?
